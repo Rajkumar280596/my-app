@@ -1,18 +1,20 @@
 <div class="parent">
     
     <div class="left">
-        <h4>Home</h4>
-        <h4>Calculator</h4>
-        <h4>About us</h4>
-        <h4>Payment</h4>
-        <h4>Products</h4>
-        <h4>Career</h4>
+        <h4 routerLink="home">Home</h4>
+        <h4 routerLink="calculator">Calculator</h4>
+        <h4 routerLink="about us">About us</h4>
+        <h4 routerLink="payment">Payment</h4>
+        <h4 routerLink="products">Products</h4>
+        <h4 routerLink="career">Career</h4>
         <h4></h4>
-        <h4>Contact us</h4>
+        <h4 routerLink="contact us">Contact us</h4>
 
         <hr><br>
         <button class="logout-button" routerLink="/login">Logout</button>
 
     </div>
-    <div class="right"></div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
 </div>
