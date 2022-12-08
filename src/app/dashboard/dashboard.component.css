@@ -1,0 +1,67 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+
+}
+
+
+
+.left{
+    height: 100%;
+    width: 20%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.left h4{
+    font-weight: 100;
+}
+
+.left h4:hover{
+    color: rgb(226, 43, 137);
+    transition-duration: 0.3s;
+    padding-left: 10px;
+    cursor: pointer;
+
+
+}
+
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: bisque;
+
+}
+
+.logout-button{
+    color: rgb(255, 255, 255);
+    width: 50%;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+
+
+
+}
+
+.logout-button:hover{
+   background-color: rgba(255, 0, 0, 0.423);
+   transition-duration: 0.3s;
+   cursor: pointer;
+
+
+}
+
+hr{
+    width: 80%;
+
+    border: 1px solid gray;
+}
