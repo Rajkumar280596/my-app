@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { MesurementsComponent } from './mesurements/mesurements.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     PaymentComponent,
     HomeComponent,
     CalculatorComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    MesurementsComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
