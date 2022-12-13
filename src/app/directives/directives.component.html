@@ -9,7 +9,7 @@
 
 <br><br>
 
-<table border="2">
+<table border="4" class="table">
     <thead>
         <tr>
             <th>Name</th>
@@ -19,9 +19,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
-            <td>{{user.name}}</td>
-            <td>{{user.age}}</td>
-            <td>{{user.package}}</td>
+            <td>{{user.name | uppercase}}</td>
+            <td [ngClass]="{'red':user.age>0&&user.age<10, 'yellow':user.age>10&&user.age<=20, 'green':user.age>20&&user.age<=30}">{{user.age}}</td>
+            <td [ngStyle]="{'background-color':user.package<=10 ? 'red' : user.package<16 ? 'orange' : 'green'}">{{user.package}}</td>
         </tr>
     </tbody>
 </table>
@@ -29,3 +29,7 @@
 <h1 *ngIf="time>0&&time<12">Good morning </h1>
 <h1 *ngIf="time>12&&time<18">Good afternoon </h1>
 <h1 *ngIf="time>18&&time<24">Good night </h1>
+
+<h1> {{today | date:'short' }}</h1>
+<h1> {{today | date:'h: mm a' }}</h1>
+

@@ -16,9 +16,13 @@ export class DirectivesComponent {
   {name: 'anil', age: 20, package:10},
   {name: 'ravi', age: 22, package:30},
   {name: 'raj', age: 25, package:15},
+  {name: 'joshna', age: 26, package:20},
+  {name: 'nayak', age: 21, package:23},
 
   ];
 
   public time:number = 22;
+
+  public today:any = new Date;
 
 }

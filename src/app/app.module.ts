@@ -12,6 +12,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { MesurementsComponent } from './mesurements/mesurements.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { GpayComponent } from './gpay/gpay.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DirectivesComponent } from './directives/directives.component';
     CalculatorComponent,
     DataBindingComponent,
     MesurementsComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    GpayComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,

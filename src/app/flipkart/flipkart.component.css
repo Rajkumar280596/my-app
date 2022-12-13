@@ -1,0 +1,15 @@
+*{
+    font-weight: 500;
+    border-width: 2px;
+    border-color: rgb(116, 116, 116);
+    margin: 10px;
+
+}
+
+.red{
+    background-color: rgb(236, 106, 106);
+}
+
+.green{
+    background-color: rgb(144, 255, 144);
+}
