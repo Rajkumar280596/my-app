@@ -14,6 +14,12 @@ import { MesurementsComponent } from './mesurements/mesurements.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
+import { FlipkartAppComponent } from './flipkart-app/flipkart-app.component';
+import { MailComponent } from './mail/mail.component';
+import { BoredomComponent } from './boredom/boredom.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +33,19 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     MesurementsComponent,
     DirectivesComponent,
     GpayComponent,
-    FlipkartComponent
+    FlipkartComponent,
+    VehicleComponent,
+    AccountComponent,
+    FlipkartAppComponent,
+    MailComponent,
+    BoredomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

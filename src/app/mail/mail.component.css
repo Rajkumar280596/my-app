@@ -1,0 +1,19 @@
+*{
+    border-top: 1px solid gray;
+    cursor: pointer;
+}
+
+
+*:hover{
+    background-color: gray;
+
+
+}
+
+.visited{
+    color: green;
+}
+
+.unvisited{
+    color: rgb(121, 65, 65);
+}
