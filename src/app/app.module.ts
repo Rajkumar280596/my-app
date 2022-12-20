@@ -9,7 +9,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MesurementsComponent } from './mesurements/mesurements.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GpayComponent } from './gpay/gpay.component';
@@ -20,6 +20,8 @@ import { AccountComponent } from './account/account.component';
 import { FlipkartAppComponent } from './flipkart-app/flipkart-app.component';
 import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +40,17 @@ import { BoredomComponent } from './boredom/boredom.component';
     AccountComponent,
     FlipkartAppComponent,
     MailComponent,
-    BoredomComponent
+    BoredomComponent,
+    CreateVehicleComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+
 
   ],
   providers: [],

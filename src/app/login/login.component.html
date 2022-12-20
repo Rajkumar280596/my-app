@@ -11,15 +11,15 @@
     <div class="parent">
     
     
-        <form class="login-form">
+        <form class="login-form" [formGroup]="loginform" >
             <label>Email:</label><br>
-            <input type="text" placeholder="Enter your mail id">
+            <input type="text" placeholder="Enter your mail id" formControlName = "email">
             <br>
     
             <label for="">Password:</label><br>
-            <input type="password" placeholder="Enter your password">
+            <input type="password" placeholder="Enter your password" formControlName = "password">
             <br>
-            <button routerLink="/dashboard">Submit</button>
+            <button (click)="submit()">Submit</button>
         </form>
     
         

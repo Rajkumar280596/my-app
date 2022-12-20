@@ -1,0 +1,19 @@
+*{
+    margin: 10px;
+}
+
+button{
+    background-color: rgb(158, 104, 208);
+    border-radius: 5px;
+    color: white;
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+}
+
+input{
+    border-radius: 10px;
+    border: 1px solid rgb(182, 182, 182);
+}

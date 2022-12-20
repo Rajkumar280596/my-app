@@ -13,10 +13,13 @@
         <h4 routerLink="flipkart-app">Account details</h4>
         <h4 routerLink="mail">Mail check</h4>
         <h4 routerLink="boredom">Boredom</h4>
+        <h4 routerLink="create-vehicle">Create-vehicle</h4>
+        <h4 routerLink="create-student">create-student</h4>
 
         <hr><br>
-        <button class="logout-button" routerLink="/login">Logout</button>
+        <button class="logout-button" (click)="logout()">Logout</button>
 
+        
     </div>
     <div class="right">
         <router-outlet></router-outlet>

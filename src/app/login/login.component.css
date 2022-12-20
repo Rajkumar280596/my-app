@@ -14,7 +14,7 @@
 
 
 *{
-    margin: 0;
+    margin: 0px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -61,6 +61,7 @@ label{
     margin-left: 10%;
     font-weight: 500;
 
+
 }
 
 
@@ -70,12 +71,13 @@ label{
 .login-form input{
 
     width: 80%;
-    margin: 5% auto ;
+    margin:  auto ;
     border: none;
     outline: none;
     background-color: transparent;
     border-bottom:1px solid white;
-    color: white;
+    color: rgb(255, 255, 255);
+    margin-top: -10px;
  
 }
 
@@ -101,6 +103,8 @@ label{
     margin: 10px auto;
     width: 100px;
     height: 25px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 
 
     

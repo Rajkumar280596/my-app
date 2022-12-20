@@ -1,0 +1,81 @@
+<h1>Student - Form</h1>
+
+<form [formGroup]="studentform">
+
+    <label for="">Name : </label>
+    <input type="text" formControlName = "name">
+    <br>
+
+    <label for="">Phone : </label>
+    <input type="number" formControlName = "phone">
+    <br>
+
+    <label for="">E mail : </label>
+    <input type="text" formControlName = "email">
+    <br>
+
+    <div formGroupName = "address">
+
+        <label for="">City</label>
+        <input type="text" formControlName="city">
+        <br>
+
+        <label for="">State</label>
+        <input type="text" formControlName="state">
+        <br>
+
+        <label for="">Pincode</label>
+        <input type="number" formControlName="pin">
+        <br>
+
+    </div>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsformarray.controls; let i = index">
+            <div formGroupName="{{ i }}">
+
+                <h4>Enter card {{ i+1 }} details : </h4> 
+
+                
+
+                <label for="">Number</label>
+                <input type="number" formControlName="number">
+                <br>
+
+                <label for="">Expiry</label>
+                <input type="month" formControlName="expiry">
+                <br>
+
+                <label for="">CVV</label>
+                <input type="number" formControlName="cvv">
+                <br>
+
+                <button (click)="delete(i)" >Delete</button> <br>
+
+            </div>
+        </div>
+    </div>
+
+    <label for="">Type : </label>
+    <input type="radio" formControlName="type" name="1" value="dayscholar">
+    <label for="">Dayscholar</label>
+    <input type="radio" formControlName="type" name="1" value="residential">
+    <label for="">Residential</label>
+    <br>
+
+    <div *ngIf="studentform.get('type')?.value== 'dayscholar'">
+    <label for=""> Bus fees :  </label>
+    <input type="number" formControlName="bus">
+    </div>
+
+    <div  *ngIf="studentform.get('type')?.value== 'residential'">
+    <label for="">Hostel fees : </label>
+    <input type="number" formControlName="hostel">
+    <br>
+    </div>
+
+    <button (click)="add()">Add card</button>
+
+    <button (click)="submit()">Submit</button>
+
+</form>

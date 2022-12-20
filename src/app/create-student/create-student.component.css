@@ -1,0 +1,23 @@
+*{
+    margin-bottom: 10px;
+    padding-left: 10px;
+
+    
+}
+
+button{
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid gray;
+    margin: 10px;
+}
+
+button:hover{
+    background-color: rgba(132, 0, 255, 0.458);
+}
+
+label{
+    width: 200px;
+    
+}
+

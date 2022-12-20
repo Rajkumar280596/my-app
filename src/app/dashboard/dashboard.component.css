@@ -22,6 +22,7 @@
 
 .left h4{
     font-weight: 100;
+    margin-bottom: 25px;
 }
 
 .left h4:hover{
@@ -43,7 +44,7 @@
 .logout-button{
     color: rgb(255, 255, 255);
     width: 50%;
-    height: 20px;
+    height: 30px;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 3px;
