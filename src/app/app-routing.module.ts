@@ -9,12 +9,14 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartAppComponent } from './flipkart-app/flipkart-app.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
+import { NotifyGuard } from './notify.guard';
 import { PaymentComponent } from './payment/payment.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
@@ -33,7 +35,8 @@ const routes: Routes = [
     {path:"mail", component:MailComponent},
     {path:"boredom", component:BoredomComponent},
     {path:"create-vehicle", component:CreateVehicleComponent},
-    {path:"create-student", component:CreateStudentComponent},
+    {path:"create-student", component:CreateStudentComponent, canDeactivate:[NotifyGuard]},
+    {path:'employee', component:EmployeeComponent},
   ]},
   {path:'', component:LoginComponent},
   {path:'payment', component:PaymentComponent}

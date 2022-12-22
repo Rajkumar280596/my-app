@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-student',
@@ -40,7 +40,7 @@ export class CreateStudentComponent {
     this.cardsformarray.push(
       new FormGroup(
         {
-          number: new FormControl(),
+          number: new FormControl(null, [Validators.required, Validators.min(100000), Validators.max(999999)]),
           expiry: new FormControl(),
           cvv: new FormControl()
         }

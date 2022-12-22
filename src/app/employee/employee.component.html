@@ -1,0 +1,161 @@
+<h3>Employee-Form</h3>
+<br>
+
+<form [formGroup]="employeeform">
+
+    <label>Name: </label>
+    <input type="text" formControlName="name">
+
+    <div class="errors" *ngIf="employeeform.get('name')?.touched && employeeform.get('name')?.invalid">
+        <p *ngIf="employeeform.get('name')?.errors?.['required']">Name is requierd</p>
+        <p *ngIf="employeeform.get('name')?.errors?.['minlength']">Name should be minimum 3 char</p>
+    </div>
+    
+    <br>
+    
+    <!-- <p>touched: {{ employeeform.get('name')?.touched }}</p>
+    <p>untoched: {{ employeeform.get('name')?.untouched }}</p>
+    <p>dirty: {{ employeeform.get('name')?.dirty }}</p>
+    <p>pristine: {{ employeeform.get('name')?.pristine }}</p>
+    <p>valid: {{ employeeform.get('name')?.valid }}</p>
+    <p>invalid: {{ employeeform.get('name')?.invalid }}</p> -->
+
+     <!-- <p>value: {{ employeeform.get('name')?.value }}</p>
+    <p>errors: {{ employeeform.get('name')?.errors | json }}</p> -->
+
+    <label>Mobile no: </label>
+    <input type="number" formControlName="mobile">
+    <div class="errors" *ngIf="employeeform.get('mobile')?.touched && employeeform.get('mobile')?.invalid">
+        <p *ngIf="employeeform.get('mobile')?.errors?.['required']">mobile is requierd</p>
+        <p *ngIf="employeeform.get('mobile')?.errors?.['min']">mobile should be minimum 10 numbers</p>
+        <p *ngIf="employeeform.get('mobile')?.errors?.['max']">mobile should be maximun 10 numbers</p>
+    </div>
+    
+
+    <br>
+
+    <label>Email: </label>
+    <input type="text" formControlName="email">
+    <div class="errors" *ngIf="employeeform.get('email')?.touched && employeeform.get('email')?.invalid">
+        <p *ngIf="employeeform.get('email')?.errors?.['required']">email is requierd</p>
+        <p *ngIf="employeeform.get('email')?.errors?.['email']">Please enter valid email id</p>
+        
+    </div>
+    
+
+
+    <br>
+
+    <label>DOB: </label>
+    <input type="date" formControlName="dob">
+    <br>
+
+      <div formGroupName = "addressdetails">
+
+        <label for="">Address:</label>
+        <input type="text" formControlName="address">
+        <br>
+
+        <label for="">City:</label>
+        <input type="text" formControlName="city">
+        <div class="errors" *ngIf="employeeform.get('addressdetails')?.get('city')?.touched && employeeform.get('addressdetails')?.get('city')?.invalid">
+            <p *ngIf="employeeform.get('addressdetails')?.get('city')?.errors?.['required']">address is requierd</p>
+            <p *ngIf="employeeform.get('addressdetails')?.get('city')?.errors?.['minlength']">Min length should be 3 characters</p>
+            
+        </div>
+
+        <br>
+
+        <label for="">State:</label>
+        <input type="text" formControlName="state">
+        <br>
+
+        <label for="">Pincode:</label>
+        <input type="number" formControlName="pin">
+        <br>
+
+    </div>
+
+    <div formGroupName = "location">
+
+        <label for="">NearBy:</label>
+        <input type="text" formControlName="nearby">
+        <br>
+
+        <label for="">Landmark:</label>
+        <input type="text" formControlName="landmark">
+
+        <br><hr>
+
+                
+    </div>
+
+    <button (click)="addnew()"> + Add Education </button>
+
+
+    <div formArrayName="education">
+        <div *ngFor="let education of educationformarray.controls, let i = index">
+
+            <div formGroupName="{{ i }}">
+            
+
+                <label for="">Qualification:</label>
+                <input type="text" formControlName="qualification">
+                <br>
+
+                <label for="">Year:</label>
+                <input type="number" formControlName="qualification">
+                <br>
+
+                <label >Percentage: </label>
+                <input type="number" formControlName="percentage" placeholder="%">
+                <br>
+
+                <button (click)="delete(i)">Delete</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <label for="">Role:</label>
+    <input type="radio" name="123" formControlName="type" value="frontend">
+    <label for="">Front-end</label>
+    <input type="radio" name="123" formControlName="type" value="backend">
+    <label for="">Back-end</label>
+
+    <div *ngIf="employeeform.get('type')?.value== 'frontend'">
+        
+        <label for="">HTML/CSS/JS/ANGULAR:</label>
+        <select value="number" formControlName="html">
+            <option *ngFor="let frontopt of frontopts" >{{frontopt}}</option>
+        </select>
+        
+        <br>
+
+    </div>
+
+    <div  *ngIf="employeeform.get('type')?.value== 'backend'">
+        
+        <label for="">NODE.JS / EXPRESS.JS / MONGO DB:</label>
+        <select value="number" formControlName="node">
+            <option *ngFor="let backopt of backopts" >{{backopt}}</option>
+            
+        </select>
+
+        
+        <br>
+
+    </div>
+    <br>
+
+
+
+
+    <button class="submit" (click)="submit()">Submit</button>
+
+
+</form>
+
+
+

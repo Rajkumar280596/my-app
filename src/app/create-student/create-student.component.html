@@ -40,6 +40,11 @@
 
                 <label for="">Number</label>
                 <input type="number" formControlName="number">
+                <div class="errors" *ngIf="cardsformarray.controls[i]?.get('number')?.touched && cardsformarray.controls[i]?.get('number')?.invalid">
+                    <p *ngIf="cardsformarray.controls[i]?.get('number')?.errors?.['required']">Enter card number</p>
+                    <p *ngIf="cardsformarray.controls[i]?.get('number')?.errors?.['min']">Number should be min 16</p>
+                    <p *ngIf="cardsformarray.controls[i]?.get('number')?.errors?.['max']">Number should be max 16</p>
+                </div>
                 <br>
 
                 <label for="">Expiry</label>
@@ -79,3 +84,18 @@
     <button (click)="submit()">Submit</button>
 
 </form>
+
+<!-- notify gaurd:
+-------------
+
+   1) Create gaurd:
+
+     ng g g notify
+
+   2) Implement gaurd:
+     
+    return confirm ("messasge")
+   
+   3) Apply gaurd:
+
+    {path: ..... , component: ....., canDeactivate: [notifyguard]} -->
