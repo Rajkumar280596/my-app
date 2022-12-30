@@ -35,6 +35,8 @@ constructor(private _loginservice:LoginService, private _router:Router){}
       }
     )
   }
-
+  name = 'rajkumar';
 
 }
+
+

@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
 import { NotifyGuard } from './notify.guard';
 import { PaymentComponent } from './payment/payment.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 
@@ -37,9 +38,12 @@ const routes: Routes = [
     {path:"create-vehicle", component:CreateVehicleComponent},
     {path:"create-student", component:CreateStudentComponent, canDeactivate:[NotifyGuard]},
     {path:'employee', component:EmployeeComponent},
+    {path: 'vehicle-details/:id', component: VehicleDetailsComponent},
+    {path: 'edit-vehicle/:id', component: CreateVehicleComponent},
   ]},
-  {path:'', component:LoginComponent},
+  
   {path:'payment', component:PaymentComponent}
+  
   
   
 ];
